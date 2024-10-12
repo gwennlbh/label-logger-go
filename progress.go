@@ -88,7 +88,7 @@ func makeProgressBarPrependFunc(verb string, color string) func(*uiprogress.Bar)
 
 func makeProgressBarAppendFunc(message string, details ...string) func(*uiprogress.Bar) string {
 	return func(b *uiprogress.Bar) string {
-		return fmt.Sprintf("%d/%d %s [dim]%s[reset]", b.Current(), b.Total, message, strings.Join(details, " "))
+		return fmt.Sprintf("%d/%d %s[dim] %s[reset]", b.Current(), b.Total, message, strings.Join(details, " "))
 	}
 }
 
