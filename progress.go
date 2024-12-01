@@ -41,6 +41,10 @@ func IncrementProgressBar(onDone ...func()) {
 		StopProgressBar()
 	}
 
+	if progressbar == nil {
+		return
+	}
+
 	progressbar.Incr()
 }
 
