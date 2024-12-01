@@ -14,10 +14,6 @@ var progressbar *uiprogress.Bar
 var progressBars *uiprogress.Progress
 
 func StartProgressBar(total int, verb string, color string) {
-	if progressbar != nil {
-		panic("progress bar already started")
-	}
-
 	if isInteractiveTerminal() || os.Getenv("FORCE_PROGRESS_BAR") == "1" {
 		Debug("terminal is interactive, starting progress bar")
 	} else {
