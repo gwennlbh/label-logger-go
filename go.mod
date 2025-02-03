@@ -1,4 +1,4 @@
-module github.com/ewen-lbh/label-logger-go
+module github.com/gwennlbh/label-logger-go
 
 go 1.23.2
 
